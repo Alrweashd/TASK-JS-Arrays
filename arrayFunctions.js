@@ -50,12 +50,19 @@ console.log(isArrayLengthEven(num2));
  * e.g.
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
-function addLailaToArray(instructors) {
-  // Your code here
-  let newArray = instructors;
-  newArray.push("Laila");
-  return newArray;
+
+function addLailaToArray(instructors){
+  const instructorsArray = [...instructors]//spread operator 
+  instructorsArray.push('Laila')
+  return instructorsArray
 }
+
+// function addLailaToArray(instructors) {
+//   // Your code here
+//   let newArray = instructors;
+//   newArray.push("Laila");
+//   return newArray;
+// }
 console.log(addLailaToArray(["Mshary", "Hasan"]));
 
 const addLailaArra1 = (instructors) => {
@@ -120,7 +127,7 @@ console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "b
  */
 // a string is an array of chars in this case
 function youGottaCalmDown(shout) {
-  // Your code here
+  
   let newArray = shout;
   if(shout.includes("!")){
     newArray = newArray.slice(0, newArray.indexOf("!")+1);
@@ -130,6 +137,3 @@ function youGottaCalmDown(shout) {
 console.log(youGottaCalmDown("HI!!!!!!!!!!"));
 console.log(youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!"));
 console.log(youGottaCalmDown("Hellooooo"));
-
-// let array = [1,2,3];
-// console.log(array.pop(0));
