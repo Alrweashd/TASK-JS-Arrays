@@ -52,10 +52,13 @@ console.log(isArrayLengthEven(num2));
  */
 
 function addLailaToArray(instructors){
-  const instructorsArray = [...instructors]//spread operator 
-  instructorsArray.push('Laila')
+  const instructorsArray = [...instructors,"Laila"]//spread operator 
   return instructorsArray
 }
+//a function that will take instructors array and return new array with new address adding to it Laila
+const addLailaToArrayArrow = (instructors) => [...instructors,"Laila"];
+
+console.log(addLailaToArrayArrow(["Mshary", "Hasan"]));
 
 // function addLailaToArray(instructors) {
 //   // Your code here
